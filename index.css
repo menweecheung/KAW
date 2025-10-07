@@ -747,3 +747,111 @@
     align-items: flex-start;
   }
 }
+
+/* 17. SECTIE */
+
+.text-section {
+  font-family: 'Arial';
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.text-section-two {
+  align-items: center;
+}
+
+.text-section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.text-section-content {
+  color: var(--swatch-grey);
+  line-height: 25px;
+}
+
+.text-section-text {
+  margin: 20px 0;
+}
+
+.text-section-link-two {
+  justify-self: start;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  cursor: pointer;
+  user-select: none;
+  position: relative; 
+  border: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  background-color: var(--swatch-ocean);
+  color: var(--swatch-white);
+  transition: all 0.12s ease-in-out;
+  
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 24px;
+    -webkit-mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
+    mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
+    background-color: var(--swatch-white);
+    vertical-align: middle;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    background-color: var(--swatch-white);
+    color: var(--swatch-ocean);
+    box-shadow: inset 0 0 0 1px var(--swatch-ocean);
+    
+    &::after {
+      width: 24px;
+      margin-left: 12px;
+      opacity: 1;
+      background-color: var(--swatch-ocean);
+    }
+  }
+}
+
+.button-secundary {
+  background-color: transparent;
+  color: var(--swatch-black);
+  box-shadow: inset 0 0 0 1px var(--swatch-beige);
+}
+
+@media (min-width: 1025px) {
+  .text-section {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .text-section-title {
+    grid-column: span 4;
+  }
+
+  .text-section-content {
+    grid-column: 5 / span 8;
+  }
+  
+  .text-section-text {
+    margin-top: 0;
+  }
+
+  .text-section-link-two {
+    justify-self: end;
+  }
+  
+  .button {
+    margin-top: 0;
+  }
+}
