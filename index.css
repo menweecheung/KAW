@@ -1,11 +1,11 @@
-/* 09. BUTTONS */
-
 :root {
   --swatch-beige: #947e1b;
   --swatch-black: #000000;
   --swatch-ocean: #17524a;
   --swatch-white: #ffffff;
 }
+
+/* 09. BUTTONS */
 
 .button {
   padding: 16px 20px;
@@ -179,4 +179,73 @@
 .project-detail-text > a {
   margin-bottom: 8px;
   cursor: pointer;
+}
+ /* 11. OUD EN NIEUW SLIDER */
+
+.image-comparer {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.image-comparer-image,
+.image-comparer-text {
+  grid-column: span 12;
+}
+
+.image-comparer-image {
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+}
+
+.image-comparer-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-comparer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--swatch-beige);
+  margin-top: 10px;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .image-comparer-image {
+    grid-column: span 6;
+  }
+  .image-comparer-text {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1025px) {
+  .image-comparer-image {
+    grid-column: span 8;
+  }
+  .image-comparer-text {
+    grid-column: span 4;
+  }
+}
+
+.image-comparer-title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  font-size: 10px;
+}
+
+.image-comparer-subtitle {
+  font-size: 12px;
+  color: var(--swatch-ocean);
+  margin-bottom: 16px;
+  text-align: right;
 }
