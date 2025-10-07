@@ -1153,3 +1153,129 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* 25. MEDIA DOWNLOAD */
+
+:root {
+  --swatch-green: #449680;
+  --swatch-ocean: #17524a;
+  --swatch-white: #ffffff;
+}
+
+.media-download {
+  font-family: 'Arial';
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  padding: 20px;
+}
+
+.media-download-container {
+  background-color: var(--swatch-green);
+  color: var(--swatch-white);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.media-download-image {
+  align-items: flex-start;
+  order: 0;
+  display: grid;
+
+  & > img {
+    margin-top: 20px;
+    height: 200px;
+    width: 250px;
+  }
+}
+
+.media-download-text-block {
+  padding: 25px;
+  order: 1;
+}
+
+.media-download-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.media-download-text {
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.button {
+  padding: 16px 20px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  position: relative; 
+  border: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 10px 10px 10px 0;
+  background-color: var(--swatch-ocean);
+  color: var(--swatch-white);
+  transition: all 0.12s ease-in-out;
+  line-height: 24px;
+
+  &:hover {
+    background-color: var(--swatch-white);
+    color: var(--swatch-ocean);
+    box-shadow: inset 0 0 0 1px var(--swatch-ocean);
+
+    &::after {
+      width: 24px;
+      margin-left: 12px;
+      opacity: 1;
+      background-color: var(--swatch-ocean);
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .media-download-container {
+    grid-column: span 12;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .media-download-text-block {
+    order: 0; 
+    padding: 50px;
+  } 
+  
+  .media-download-image {
+    order: 1;
+  }
+  
+  .media-download-title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .media-download-container {
+    grid-column: 5 / span 8;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .media-download-text-block {
+    order: 0;
+    padding: 50px;
+  }
+  
+  .media-download-image {
+    order: 1;
+  }
+  
+  .media-download-title {
+    font-size: 32px;
+  }
+}
