@@ -974,3 +974,90 @@
     margin-top: 0;
   }
 }
+
+/* 22. MENSEN CARD */
+
+.employee-card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.employee-card {
+  font-family: 'Arial';
+  transition: transform 0.3s ease;
+  margin-bottom: 14px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    
+    .employee-card-image-container {
+      box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.16);
+      
+      &::after {
+        opacity: 0;
+      }
+    }
+    
+    .employee-card-image {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+}
+
+.employee-card-image-container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  aspect-ratio: 3 / 4;
+}
+
+.employee-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.employee-card-name {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.employee-card-function {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.employee-card-details {
+  font-size: 14px;
+}
+
+.employee-card-link {
+  color: var(--swatch-ocean);
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .employee-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .employee-card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
