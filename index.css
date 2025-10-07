@@ -1,6 +1,7 @@
 :root {
   --swatch-beige: #947e1b;
   --swatch-black: #000000;
+  --swatch-grey: #707070;
   --swatch-ocean: #17524a;
   --swatch-white: #ffffff;
 }
@@ -248,4 +249,88 @@
   color: var(--swatch-ocean);
   margin-bottom: 16px;
   text-align: right;
+}
+
+/* 12. QUOTE */
+
+.quote {
+  color: var(--swatch-ocean);
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.quote-text,
+.quote-image {
+  grid-column: span 12;
+}
+
+.quote-text::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  -webkit-mask-image: url('https://img.icons8.com/?size=100&id=lO7AfSDCWFBX&format=png&color=1A1A1A');
+  mask-image: url('https://img.icons8.com/?size=100&id=lO7AfSDCWFBX&format=png&color=1A1A1A');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(--swatch-ocean);
+  margin-bottom: 28px;
+}
+
+.quote-quote {
+  font-size: 36px;
+  margin: 0;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 28px;
+  font-style: normal;
+}
+
+.quote-name {
+  color: var(--swatch-black);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quote-subtitle {
+  display: block;
+  margin-top: 4px;
+  color: var(--swatch-grey);
+  font-size: 12px;
+}
+
+.quote-image {
+  border-radius: 4px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .quote-text {
+    grid-column: span 6; 
+  }
+  
+  .quote-image { 
+    grid-column: span 6; 
+  }
+}
+
+@media (min-width: 1025px) {
+  .quote-text { 
+    grid-column: span 6; 
+  }
+  
+  .quote-image {
+    grid-column: 8 / span 4; 
+  }
 }
