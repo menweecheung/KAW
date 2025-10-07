@@ -1,10 +1,10 @@
 /* 09. BUTTONS */
 
 :root {
-  --swatch-ocean: #17524a;
-  --swatch-white: #ffffff;
   --swatch-beige: #947e1b;
   --swatch-black: #000000;
+  --swatch-ocean: #17524a;
+  --swatch-white: #ffffff;
 }
 
 .button {
@@ -117,4 +117,66 @@
       opacity: 0;
     }
   }
+}
+
+/* 10. PROJECT DETAIL */
+
+.project-detail {
+  font-family: 'Arial', sans-serif;
+  border-bottom: 1px solid var(--swatch-beige);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-detail-column {
+  grid-column: span 12;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-detail-column {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1025px) {
+  .project-detail-column {
+    grid-column: span 4;
+  }
+}
+
+.project-detail-column > img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-detail-title {
+  break-inside: avoid;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.project-detail-definition {
+  padding: 0;
+  margin: 8px 0 20px 0;
+  color: var(--swatch-ocean);
+}
+
+.project-detail-text {
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.project-detail-text > a {
+  margin-bottom: 8px;
+  cursor: pointer;
 }
