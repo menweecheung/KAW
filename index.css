@@ -1061,3 +1061,95 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* 23. VERTICALE UITKLAPPER */
+
+.grid-expandable {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Arial';
+}
+
+.grid-expandable-header {
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: var(--swatch-beige);
+  text-transform: uppercase;
+}
+
+.grid-expandable-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--swatch-beige);
+  color: var(--swatch-white);
+}
+
+.grid-expandable-image img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.grid-expandable-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.grid-expandable-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.grid-expandable-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background: var(--swatch-white);
+    transition: transform 0.3s ease;
+  }
+  
+  &::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    transform: translateY(-50%);
+  }
+  
+  &::after {
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    transform: translateX(-50%) scaleY(1);
+    transform-origin: center;
+  }
+  
+  &:hover::after {
+    transform: translateX(-50%) scaleY(0);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-expandable {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .grid-expandable {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
