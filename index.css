@@ -1,4 +1,5 @@
 :root {
+  --swatch-light-beige: #ede5c5;
   --swatch-beige: #947e1b;
   --swatch-black: #000000;
   --swatch-grey: #707070;
@@ -852,6 +853,124 @@
   }
   
   .button {
+    margin-top: 0;
+  }
+}
+
+/* 19. HIGHLIGHT EXPERTISE */
+
+.highlight {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 20px;
+  font-family: 'Arial';
+}
+
+.highlight-title {
+  color: var(--swatch-beige);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.highlight-text {
+  margin-block: 20px;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.highlight-links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;  
+  color: var(--swatch-beige);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  
+  & > li {
+    margin: 0 10px 10px 0;
+    background-color: var(--swatch-light-beige);
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center; 
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    
+    &:hover {
+      border: solid 1px var(--swatch-beige);
+      
+      &::after {
+        transform: translateX(2px);
+      }
+    }
+    
+    &::after {
+      content: "";
+      display: inline-block;
+      margin-left: 5px;
+      width: 12px;
+      height: 12px;
+      -webkit-mask-image: url('https://img.icons8.com/?size=100&id=59862&format=png&color=000000');
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      -webkit-mask-position: center;      
+      mask-image: url('https://img.icons8.com/?size=100&id=59862&format=png&color=000000');
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      mask-position: center;
+      background-color: var(--swatch-beige);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+.highlight-image {
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  border-radius: 4px;
+  margin-top: 10px;
+  
+  & > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .highlight {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .highlight-textblock {
+    grid-column: 1;
+  }
+
+  .highlight-image {
+    grid-column: 2;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  .highlight {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .highlight-textblock {
+    grid-column: span 7;
+  }
+
+  .highlight-image {
+    grid-column: 9 / span 4;
     margin-top: 0;
   }
 }
