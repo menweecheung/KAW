@@ -8,120 +8,6 @@
   --swatch-white: #ffffff;
 }
 
-/* 09. BUTTONS */
-
-.button {
-  padding: 16px 20px;
-  text-transform: uppercase;
-  border-radius: 32px;
-  cursor: pointer;
-  user-select: none;
-  position: relative; 
-  border: none;
-  font-size: 10px;
-  letter-spacing: 2px;
-  margin: 10px;
-  background-color: var(--swatch-ocean);
-  color: var(--swatch-white);
-  transition: all 0.12s ease-in-out;
-
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 24px;
-    
-    -webkit-mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
-    mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
-    
-    background-color: var(--swatch-white);
-    vertical-align: middle;
-    opacity: 0;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-
-  &:hover {
-    background-color: var(--swatch-white);
-    color: var(--swatch-ocean);
-    box-shadow: inset 0 0 0 1px var(--swatch-ocean);
-
-    &::after {
-      width: 24px;
-      margin-left: 12px;
-      opacity: 1;
-      background-color: var(--swatch-ocean);
-    }
-  }
-}
-
-.button-secundary {
-  background-color: transparent;
-  color: var(--swatch-black);
-  box-shadow: inset 0 0 0 1px var(--swatch-beige);
-}
-
-.button-borderless {
-  background-color: var(--swatch-white);
-  color: var(--swatch-black);
-  
-  &:hover {
-    box-shadow: none;
-  }
-}
-
-.button-link {
-  background-color: transparent;
-  color: var(--swatch-beige);
-  padding-left: 0;
-  
-  &:hover {
-    box-shadow: none;
-  }
-}
-
-.button-back {
-  background-color: transparent;
-  color: var(--swatch-ocean);
-  padding-left: 34px;
-  padding-right: 0;
-  position: relative;
-
-  transition: color 0.3s ease, padding-left 0.3s ease;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-color: var(--swatch-ocean);
-    -webkit-mask: url('https://img.icons8.com/?size=100&id=87017&format=png&color=1A1A1A') no-repeat center / contain;
-    mask: url('https://img.icons8.com/?size=100&id=87017&format=png&color=1A1A1A') no-repeat center / contain;
-
-    opacity: 1;
-    transition: background-color 0.3s ease;
-  }
-  
-  &:hover {
-    color: var(--swatch-black);
-    box-shadow: none;
-
-    &::before {
-      background-color: var(--swatch-black);
-    }
-
-    &::after {
-      content: "";
-      width: 0;
-      margin-left: 0;
-      opacity: 0;
-    }
-  }
-}
-
 /* 10. PROJECT DETAIL */
 
 .project-detail {
@@ -1277,5 +1163,119 @@
   
   .media-download-title {
     font-size: 32px;
+  }
+}
+
+/* 09. BUTTONS */
+
+.button {
+  padding: 16px 20px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  cursor: pointer;
+  user-select: none;
+  position: relative; 
+  border: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 10px;
+  background-color: var(--swatch-ocean);
+  color: var(--swatch-white);
+  transition: all 0.12s ease-in-out;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 24px;
+    
+    -webkit-mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
+    mask: url('https://img.icons8.com/?size=100&id=99416&format=png&color=1A1A1A') no-repeat center / contain;
+    
+    background-color: var(--swatch-white);
+    vertical-align: middle;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: var(--swatch-white);
+    color: var(--swatch-ocean);
+    box-shadow: inset 0 0 0 1px var(--swatch-ocean);
+
+    &::after {
+      width: 24px;
+      margin-left: 12px;
+      opacity: 1;
+      background-color: var(--swatch-ocean);
+    }
+  }
+}
+
+.button-secundary {
+  background-color: transparent;
+  color: var(--swatch-black);
+  box-shadow: inset 0 0 0 1px var(--swatch-beige);
+}
+
+.button-borderless {
+  background-color: var(--swatch-white);
+  color: var(--swatch-black);
+  
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.button-link {
+  background-color: transparent;
+  color: var(--swatch-beige);
+  padding-left: 0;
+  
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.button-back {
+  background-color: transparent;
+  color: var(--swatch-ocean);
+  padding-left: 34px;
+  padding-right: 0;
+  position: relative;
+
+  transition: color 0.3s ease, padding-left 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--swatch-ocean);
+    -webkit-mask: url('https://img.icons8.com/?size=100&id=87017&format=png&color=1A1A1A') no-repeat center / contain;
+    mask: url('https://img.icons8.com/?size=100&id=87017&format=png&color=1A1A1A') no-repeat center / contain;
+
+    opacity: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  &:hover {
+    color: var(--swatch-black);
+    box-shadow: none;
+
+    &::before {
+      background-color: var(--swatch-black);
+    }
+
+    &::after {
+      content: "";
+      width: 0;
+      margin-left: 0;
+      opacity: 0;
+    }
   }
 }
