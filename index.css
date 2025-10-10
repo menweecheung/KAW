@@ -115,6 +115,7 @@
   overflow: hidden;
   width: 100%;
   aspect-ratio: 5 / 4;
+  height: 500px; /* yeet */
 }
 
 .image-comparer-image > img {
