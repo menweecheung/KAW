@@ -9,9 +9,15 @@
 }
 
 .feature-block {
-   & > span {
-     display: block;
-   }
+  font-family: 'Arial';
+  margin: 10px 0 32px 0;
+  
+  & > span {
+    display: block;
+  }
+
+  & > p {
+    color: var(--swatch-grey);
 }
 
 /* 10. PROJECT DETAIL */
