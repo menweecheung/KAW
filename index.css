@@ -515,8 +515,9 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  padding: 32px 20px 20px 20px; /* new */
+  padding: 32px 20px 20px 20px;
   border-top: 1px solid var(--swatch-beige);
+  margin-top: 20px; /*new */
 }
 
 .contact-details-column {
