@@ -8,6 +8,12 @@
   --swatch-white: #ffffff;
 }
 
+.feature-block {
+   & > span {
+     display: block;
+   }
+}
+
 /* 10. PROJECT DETAIL */
 
 .project-detail {
