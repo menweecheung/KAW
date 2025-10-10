@@ -8,7 +8,7 @@
   --swatch-white: #ffffff;
 }
 
-/* * {
+* {
   box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@
 
   & > p {
     color: var(--swatch-grey);
-} */
+}
 
 /* 10. PROJECT DETAIL */
 
