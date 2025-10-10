@@ -9,7 +9,7 @@
 }
 
 * {
-  box-sizing: borderbox;
+  box-sizing: border-box;
 }
 
 .feature-block {
