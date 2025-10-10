@@ -8,10 +8,6 @@
   --swatch-white: #ffffff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .feature-block {
   display: inline-block;
   padding: 35px 35px 10px 35px;
