@@ -698,7 +698,7 @@
 }
 
 .text-section .button {
-  margin-top: 10px;
+  margin: 10px 10px 10px 0;
   padding: 10px 16px;
   text-transform: uppercase;
   border-radius: 32px;
