@@ -8,6 +8,10 @@
   --swatch-white: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .feature-block {
   background: red;
   display: inline-block;
