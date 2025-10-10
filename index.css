@@ -427,7 +427,7 @@
   display: block;
 }
 
-.button {
+.featured .button {
   padding: 16px 20px;
   text-transform: uppercase;
   border-radius: 32px;
@@ -471,7 +471,7 @@
   }
 }
 
-.button-borderless {
+.featured .button-borderless {
   background-color: var(--swatch-white);
   color: var(--swatch-black);
   
