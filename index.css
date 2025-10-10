@@ -697,7 +697,7 @@
   justify-self: start;
 }
 
-.button {
+.text-section .button {
   margin-top: 10px;
   padding: 10px 16px;
   text-transform: uppercase;
@@ -739,7 +739,7 @@
   }
 }
 
-.button-secundary {
+.text-section .button-secundary {
   background-color: transparent;
   color: var(--swatch-black);
   box-shadow: inset 0 0 0 1px var(--swatch-beige);
@@ -766,7 +766,7 @@
     justify-self: end;
   }
   
-  .button {
+  .text-section .button {
     margin-top: 0;
   }
 }
@@ -1122,7 +1122,7 @@
   line-height: 24px;
 }
 
-.button {
+.media-download .button {
   padding: 16px 20px;
   text-transform: uppercase;
   border-radius: 50px;
